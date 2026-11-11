@@ -1,15 +1,17 @@
 package weather;
 
 public class WeatherProvider {
-    public static WeatherProvider instance;
+    private static WeatherProvider instance;
     private String[] weather =
             { "SUN", "RAIN", "FOG", "SNOW" };
 
     public static WeatherProvider getInstance() {
-        if (instance == null) instance = new WeatherProvider();;
+        if (instance == null) {
+            instance = new WeatherProvider();
+        }
         return instance;
     }
-    public WeatherProvider() {
+    private WeatherProvider() {
 
     }
     public String getCurrentWeather(Coordinates p_coordinates) {

@@ -3,8 +3,8 @@ package aircraft;
 import weather.Coordinates;
 
 public class AircraftFactory {
-    public static AircraftFactory instance;
-    public long id = 1;
+    private  static AircraftFactory instance;
+    private  long id = 1;
 
     private AircraftFactory()
     {

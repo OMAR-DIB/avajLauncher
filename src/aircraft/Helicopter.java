@@ -37,14 +37,13 @@ public class Helicopter extends Aircraft{
         }
 
 
-        System.out.println(this + ": " + message);
+        coordinates = new Coordinates(lon, lat, height);
 
+        System.out.println(this + ": " + message);
 
         if (height == 0) {
             System.out.println(this + " landing.");
             weatherTower.unregister(this);
-        } else {
-            coordinates = new Coordinates(lon, lat, height);
         }
     }
 }
